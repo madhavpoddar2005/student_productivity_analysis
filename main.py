@@ -34,8 +34,6 @@ def get_data():
     save_session(session.to_list())
 
 
-
-
 def select_month(months):
     print("\nAVAILABLE MONTHS: ")
     for i, m in enumerate(months, start=1):
@@ -51,8 +49,6 @@ def select_month(months):
         except ValueError:
             print("Invalid Input")
     return months[c - 1]
-
-
 
 
 while True:
@@ -99,8 +95,9 @@ while True:
                 4. Hours per Month
                 5. Daily Productivity
                 6. Daily Hours Studied
-                7. Analytics Dashboard
-                8. Exit"""
+                7. Subject v/s Productivity
+                8. Analytics Dashboard
+                9. Exit"""
             )
             ch = int(input("\nChoose the type of graph you want to see: "))
 
@@ -125,9 +122,12 @@ while True:
                 hours_per_day(df, selected_month)
 
             elif ch == 7:
-                analystic_dashboard(df)
+                subject_vs_productivityt(df)
 
             elif ch == 8:
+                analystic_dashboard(df)
+
+            elif ch == 9:
                 print("GOODBYE...")
                 break
 

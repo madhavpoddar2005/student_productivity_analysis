@@ -89,6 +89,17 @@ def productivity_per_day(df, month):
 
     plt.show()
 
+def subject_vs_productivityt(df):
+    data = df.groupby("Subject")["Productivity"].mean()
+
+    plt.bar(data.index,data.values)
+
+    plt.title("Subject v/s Productivity")
+    plt.xlabel("Subjects")
+    plt.ylabel("Productivity")
+    
+    plt.show()
+
 
 def analystic_dashboard(df):
 
