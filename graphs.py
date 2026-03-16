@@ -14,6 +14,10 @@ def plot_subject_hours(df):
     plt.ylabel("Total Study Hours")
     plt.title("Study Hours per Subject")
 
+    plt.savefig(
+        "/Users/madhavpoddar/Desktop/Coding/Python/student_productivity_analysis/Graphs/graph1"
+    )
+
     plt.show()
 
 
@@ -22,6 +26,10 @@ def productivity_vs_hours(df):
     plt.xlabel("Hours")
     plt.ylabel("Productivity")
     plt.title("Productivity v/s Hours")
+
+    plt.savefig(
+        "/Users/madhavpoddar/Desktop/Coding/Python/student_productivity_analysis/Graphs/graph2"
+    )
 
     plt.show()
 
@@ -40,6 +48,10 @@ def productivity_per_month(df):
     plt.xlabel("Month")
     plt.ylabel("Productivity")
 
+    plt.savefig(
+        "/Users/madhavpoddar/Desktop/Coding/Python/student_productivity_analysis/Graphs/graph3"
+    )
+
     plt.show()
 
 
@@ -55,6 +67,10 @@ def hours_per_month(df):
     plt.title("Hours Per Month")
     plt.xlabel("Month")
     plt.ylabel("Hours")
+
+    plt.savefig(
+        "/Users/madhavpoddar/Desktop/Coding/Python/student_productivity_analysis/Graphs/graph4"
+    )
 
     plt.show()
 
@@ -72,6 +88,10 @@ def hours_per_day(df, month):
     plt.xlabel(f"Days of {month}")
     plt.ylabel("Hours")
 
+    plt.savefig(
+        "/Users/madhavpoddar/Desktop/Coding/Python/student_productivity_analysis/Graphs/graph5"
+    )
+
     plt.show()
 
 
@@ -87,17 +107,26 @@ def productivity_per_day(df, month):
     plt.xlabel(f"Days of {month}")
     plt.ylabel("Hours")
 
+    plt.savefig(
+        "/Users/madhavpoddar/Desktop/Coding/Python/student_productivity_analysis/Graphs/graph6"
+    )
+
     plt.show()
+
 
 def subject_vs_productivityt(df):
     data = df.groupby("Subject")["Productivity"].mean()
 
-    plt.bar(data.index,data.values)
+    plt.bar(data.index, data.values)
 
     plt.title("Subject v/s Productivity")
     plt.xlabel("Subjects")
     plt.ylabel("Productivity")
-    
+
+    plt.savefig(
+        "/Users/madhavpoddar/Desktop/Coding/Python/student_productivity_analysis/Graphs/graph8"
+    )
+
     plt.show()
 
 
@@ -119,6 +148,10 @@ def analystic_dashboard(df):
     prod_month = df.groupby("Month")["Productivity"].mean()
     ax[1, 1].plot(prod_month.index, prod_month.values, marker=".")
     ax[1, 1].set_title("Month and Productivity")
+
+    plt.savefig(
+        "/Users/madhavpoddar/Desktop/Coding/Python/student_productivity_analysis/Graphs/graph7"
+    )
 
     plt.tight_layout()
     plt.show()
